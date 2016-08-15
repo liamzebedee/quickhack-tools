@@ -12,3 +12,5 @@ Tools for quick hacks
 `netstat -tulpn | grep :80`
 
 `ln -s /etc/nginx/sites-available/liamz.co nginxconf`
+
+`scp your_username@remotehost.edu:foobar.txt /local/dir`
