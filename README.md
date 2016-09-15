@@ -14,3 +14,5 @@ Tools for quick hacks
 `ln -s /etc/nginx/sites-available/liamz.co nginxconf`
 
 `scp your_username@remotehost.edu:foobar.txt /local/dir`
+
+`at /dev/urandom | base64 | head -c 15 && echo`
