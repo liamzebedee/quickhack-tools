@@ -16,3 +16,5 @@ Tools for quick hacks
 `scp your_username@remotehost.edu:foobar.txt /local/dir`
 
 `at /dev/urandom | base64 | head -c 15 && echo`
+
+`git grep -C 3 TODO`
