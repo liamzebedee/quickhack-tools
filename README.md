@@ -18,3 +18,5 @@ Tools for quick hacks
 `at /dev/urandom | base64 | head -c 15 && echo`
 
 `git grep -C 3 TODO`
+
+`htop` for viewing and killing processes easily in Unix systems
