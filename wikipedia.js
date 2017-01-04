@@ -1,3 +1,10 @@
+// 
+//
+// I made this into a Chrome extension!!!
+// https://github.com/liamzebedee/highwiki
+//
+//
+
 // makeKnowledgeFunky
 function makeKnowledgeFunky(ev){ 
 	ev.preventDefault(); 
