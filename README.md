@@ -20,3 +20,5 @@ Tools for quick hacks
 `git grep -C 3 TODO`
 
 `htop` for viewing and killing processes easily in Unix systems
+
+`git clone --depth=1 <remote_repo_url>` clone git repos quicker (to only depth 1 of commit history)
