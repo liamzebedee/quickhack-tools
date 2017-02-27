@@ -22,3 +22,5 @@ Tools for quick hacks
 `htop` for viewing and killing processes easily in Unix systems
 
 `git clone --depth=1 <remote_repo_url>` clone git repos quicker (to only depth 1 of commit history)
+
+`rsync -az CODE_REPO/ yourserver.com:./CODE_REPO && ssh -t yourserver.com 'sudo PORT=80 node ./bot'` - easy simple deploy script with no install
