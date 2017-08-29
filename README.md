@@ -24,3 +24,6 @@ Tools for quick hacks
 `git clone --depth=1 <remote_repo_url>` clone git repos quicker (to only depth 1 of commit history)
 
 `rsync -az CODE_REPO/ yourserver.com:./CODE_REPO && ssh -t yourserver.com 'sudo PORT=80 node ./bot'` - easy simple deploy script with no install
+
+`lsof -ti:8889 | xargs kill -9` to kill the process binding to port 8889 - ie "Port already in use"
+
