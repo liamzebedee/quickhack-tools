@@ -3,7 +3,7 @@ Tools for quick hacks
 
 `rsync -a code/ root@server:/code/`
 
-`screen` and Ctrl+A D.
+`screen -S name` and Ctrl+A D. `screen -r name`
 
 `PORT=80 nohup node . &`
 
