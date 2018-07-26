@@ -27,3 +27,4 @@ Tools for quick hacks
 
 `lsof -ti:8889 | xargs kill -9` to kill the process binding to port 8889 - ie "Port already in use"
 
+`sudo !!` repeats previous command
