@@ -31,4 +31,4 @@ Tools for quick hacks
 
 `find . -name "*.sol" -exec mv  {} old \;` moves all files that match a pattern in a recursive fashion into `old/`
 
-`find . -name *.js.map -mtime -1 | grep -v node_modules | xargs rm` deletes all of the accidentally generated .js.map files from a TypeScript compile
+`find . -name '*.js.map' -mtime -1 | grep -v node_modules | xargs rm` deletes all of the accidentally generated .js.map files from a TypeScript compile. (remember the quotes on the `-name` param, it will glob expand otherwise)
