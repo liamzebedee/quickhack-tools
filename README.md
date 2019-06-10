@@ -34,3 +34,5 @@ Tools for quick hacks
 `find . -name '*.js.map' -mtime -1 | grep -v node_modules | xargs rm` deletes all of the accidentally generated .js.map files from a TypeScript compile. (remember the quotes on the `-name` param, it will glob expand otherwise)
 
 `stat -f %A file.txt` - show octal permissions of file (good for SSH)
+
+`ssh -fN -L 7082:localhost:7080 ubuntu@blah.blah.blah.blah` - quickly expose blah.blah.blah.blah:7080 to your local pc
