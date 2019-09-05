@@ -36,3 +36,34 @@ Tools for quick hacks
 `stat -f %A file.txt` - show octal permissions of file (good for SSH)
 
 `ssh -fN -L 7082:localhost:7080 ubuntu@blah.blah.blah.blah` - quickly expose blah.blah.blah.blah:7080 to your local pc
+
+
+### Bash
+#### Checking if a command is installed
+```
+if ! [ -x "$(command -v gsed)" ]; then
+    echo 'Error: gsed is not installed.' >&2
+    exit 1
+fi
+```
+
+#### Updating a variable in a file
+Say you have a file `migrations/2_deploy_contracts.js`, and somewhere in the file is the line below:
+
+```js
+const UniswapFactoryAddress = '0x2dF4d51f6549D8E29a77C5E981F441376F15fE15' // UniswapFactory contract address
+```
+
+We want to replace the **value** of the variable (the hex string) with another value. This is actually quite simple in sed. 
+
+```sh
+# use gsed on macOS
+sed -i -e "/UniswapFactoryAddress/s/0x[a-fA-F0-9]\{0,40\}/$FACTORY/" ../../migrations/2_deploy_contracts.js
+```
+
+The string you see:
+ 1. Matches a line which contains `UniswapFactoryAddress`
+ 2. Replaces (`s` command) the part of the line matching the hexadecimal pattern `0x[a-fA-F0-9]\{0,40\}`. Note in sed regex, you must escape `{`
+ 3. With the variable contained in $FACTORY
+
+Using the `-e` flag means it updates the file, in-place!
