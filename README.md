@@ -37,6 +37,12 @@ Tools for quick hacks
 
 `ssh -fN -L 7082:localhost:7080 ubuntu@blah.blah.blah.blah` - quickly expose blah.blah.blah.blah:7080 to your local pc
 
+### Proxying http://localhost to https://localhost
+This is simple on Unix systems using [mitmproxy](https://mitmproxy.org/):
+
+```bash
+mitmdump -p 443 --mode reverse:http://localhost:3000/
+```
 
 ### Bash
 #### Checking if a command is installed
