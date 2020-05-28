@@ -73,3 +73,7 @@ The string you see:
  3. With the variable contained in $FACTORY
 
 Using the `-e` flag means it updates the file, in-place!
+
+#### Exposing localhost ports to the wider world
+
+`socat tcp-l:18555,fork,reuseaddr tcp:127.0.0.1:18556`
