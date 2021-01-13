@@ -77,3 +77,14 @@ Using the `-e` flag means it updates the file, in-place!
 #### Exposing localhost ports to the wider world
 
 `socat tcp-l:18555,fork,reuseaddr tcp:127.0.0.1:18556`
+
+#### Backgrounding a process in a Bash script and killing it later.
+
+```sh
+ganache-cli -d --db db -i 50 &
+PID=$!
+
+# ...
+
+kill $PID
+```
